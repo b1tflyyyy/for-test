@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package main;
+
+service NumbersStorage {
+    rpc SetNumbers(SetNumbersRequest) returns (SetNumbersResponse) {}
+    rpc GetNumbers(GetNumbersRequest) returns (GetNumbersResponse) {}
+}
+
+message SetNumbersRequest {
+    int64 x = 1;
+    int64 y = 2;
+}
+
+message SetNumbersResponse { }
+
+message GetNumbersRequest { }
+
+message GetNumbersResponse {
+    int64 x = 1;
+    int64 y = 2;
+}
